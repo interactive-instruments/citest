@@ -26,4 +26,3 @@ steps:
       - ls -l
       - cd neuesprojekt
       - ls -l
-      - ./neuesprojekt
