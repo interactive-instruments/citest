@@ -13,6 +13,6 @@ steps:
       - svn co --username $SVNSECRET --password $SVNSECRET http://hermes.interactive-instruments.de/svn/test/trunk/neuesprojekt/
 
   - name: cmake
-    image: slaves/cmake
+    image: kitware/cmake
     commands:
       - cmake .
