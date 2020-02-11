@@ -18,9 +18,11 @@ steps:
       - cd neuesprojekt
       - cmake .
       - cmake --build .
+      - ls -l
 
   - name: run
     image: alpine
     commands:
+      - ls -l
       - cd neuesprojekt
       - ./neuesprojekt
