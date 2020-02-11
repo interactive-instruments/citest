@@ -6,5 +6,8 @@ name: default
 steps:
   - name: subversion
     image: pikado/alpine-svn
+    environment:
+      SVNSECRET:
+        from_secret: svn_secret
     commands:
-      - svn co http://hermes.interactive-instruments.de/svn/test/trunk/neuesprojekt/
+      - svn co --username $SVNSECRET --password $SVNSECRET http://hermes.interactive-instruments.de/svn/test/trunk/neuesprojekt/
