@@ -7,4 +7,4 @@ steps:
   - name: subversion
     image: pikado/alpine-svn
     commands:
-      - svn co http://hermes/svn/test/trunk/neuesprojekt/
+      - svn co http://hermes.interactive-instruments.de/svn/test/trunk/neuesprojekt/
