@@ -1,28 +1,7 @@
----
-kind: pipeline
-type: docker
-name: default
+pipeline:
 
-steps:
-  - name: subversion
-    image: pikado/alpine-svn
-    environment:
-      SVNSECRET:
-        from_secret: svn_secret
+  build:
+    image: debian-buster-gcc83
     commands:
-      - svn co --username $SVNSECRET --password $SVNSECRET http://hermes.interactive-instruments.de/svn/test/trunk/neuesprojekt/
-
-  - name: cmake
-    image: lycantropos/cmake
-    commands:
-      - cd neuesprojekt
       - cmake .
-      - cmake --build .
-      - ls -l
-
-  - name: run
-    image: alpine
-    commands:
-      - ls -l
-      - cd neuesprojekt
-      - ls -l
+      - cmake -build .
