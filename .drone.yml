@@ -4,4 +4,5 @@ pipeline:
     image: docker.ci.interactive-instruments.de/cicd/debian-buster-gcc83
     commands:
       - cmake .
-      - cmake -build .
+      - cmake --build .
+      - ./citest
