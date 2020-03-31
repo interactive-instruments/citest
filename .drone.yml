@@ -9,5 +9,4 @@ pipeline:
 
   test:
     image: plugins/webhook
-    settings:
-      urls: http://xtf-200:8080/job/Packaging_Trigger_Helper/buildWithParameters?trigger=citesting&project=abc&svnpath=xyzpath&token=token
+    urls: http://xtf-200:8080/job/Packaging_Trigger_Helper/buildWithParameters?trigger=citesting&project=abc&svnpath=xyzpath&token=token
