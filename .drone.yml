@@ -10,3 +10,4 @@ pipeline:
   test:
     image: plugins/webhook
     urls: http://xtf-200:8080/job/Packaging_Trigger_Helper/buildWithParameters?trigger=citesting&project=abc&svnpath=xyzpath&token=token
+    method: GET
